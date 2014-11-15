@@ -7,11 +7,12 @@
 * The signature of the function had been updated to return the index instead of the pointer. If you still see your function signature returns a char * or String, please click the reload button  to reset your code definition.
 *
 */
+
 package com.oj.practice;
 
 public class Strstr {
 
-	public int strStr(String haystack, String needle) {
+	public int str1Str(String haystack, String needle) {
 		int stackLength = haystack.length();
 		int needleLength = needle.length();
 		
@@ -40,4 +41,21 @@ public class Strstr {
         }
         return -1;
     }
+/**
+ * A better and common ways to solve this problem**/
+/*
+	
+	public int strStr(String haystack, String needle) {
+		for (int i = 0;; i++) {
+			for (int j = 0;; j++) {
+				if (j == needle.length())
+					return i;
+				if (i + j == haystack.length())
+					return -1;
+				if (needle.charAt(j) != haystack.charAt(i + j))
+					break;
+			}
+		}
+	}
+*/
 }
